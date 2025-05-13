@@ -1,0 +1,178 @@
+@font-face {
+    font-family: NorseBold;
+    src: url(fonts/Norse-Bold.woff2);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(fonts/Roboto-VariableFont_wdth\,wght.woff2)
+}
+
+:root {
+    --backdrop-img: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(238, 238, 238, 1) 24%);
+    --main-font-color: #444444;
+    --main-font-stack: Roboto, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
+    --submit-button-color: rgb(59, 88, 20);
+    --submit-button-col-hover: rgb(20, 70, 8);
+    font-size: 20px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.main-container {
+    display: flex;
+}
+
+.content-left {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-left > p {
+    box-sizing: border-box;
+    position: absolute;
+    text-align: center;
+    margin: 0;
+    padding: 16px;
+    font-family: var(--main-font-stack);
+    font-weight: 200;
+    font-size: clamp(0.6rem, 0.6rem + 0.7vw, 1.1rem);
+    background-color: rgba(0,0,0,0.281);
+    width: 100%;
+    color: white;
+    bottom: 0;
+}
+
+.content-left  > img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.logo-container {
+    font-family: 'NorseBold', 'Times New Roman', serif;
+    position: absolute;
+    top: calc(50px + 15vh);
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 0.281);
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: clamp(1.5rem, 1rem + 2vw, 3rem);
+}
+
+.logo-container > img {
+    width: calc(50px + 2.2vw);
+    height: auto;
+}
+
+.content-right {
+    font-family: var(--main-font-stack);
+    background: var(--backdrop-img);
+    color: var(--main-font-color);
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.content-right header {
+    font-weight: 600;
+    font-size: clamp(1rem, 1rem + 1.5vw, 1.6rem);
+    padding: 1.5vh 72px;
+}
+
+.form-container {
+    width: 100%;
+}
+
+.form-main {
+    padding: 1.5vh 56px;
+    background-color: white;
+    box-shadow: 0px 10px 10px -3px rgba(0,0,0,0.1);
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    border-color: transparent;
+}
+
+fieldset legend {
+    color: var(--main-font-color);
+    font-size: clamp(1.2rem, 1.2rem + 1.5vw, 1.8rem);
+    font-weight: bold;
+}
+
+fieldset ul {
+    display: flex; 
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+fieldset li {
+    display: flex;
+    gap: 112px;
+    color: rgb(77, 77, 77);
+    font-size: clamp(0.5rem, 0.5rem + 0.7vw, 0.8rem);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+fieldset li>div>label {
+    text-transform: uppercase;
+}
+
+fieldset li>div>input {
+    font-family: var(--main-font-stack);
+    display: block;
+    padding: 8px;
+    width: 120%;
+}
+
+.form-extra {
+    padding: 72px;
+}
+
+.form-extra button {
+    font-family: Roboto;
+    font-size: clamp(0.5rem, 0.5rem + 0.7vw, 0.8rem);
+    font-weight: bold;
+    color: white;
+    background-color: var(--submit-button-color);
+    box-shadow: 0px 10px 10px -3px rgba(0,0,0,0.1);
+    border: none;
+    padding: 16px 48px;
+    border-radius: 12px;
+}
+
+.form-extra button:hover {
+    cursor: pointer;
+    background-color: var(--submit-button-col-hover);
+}
+
+.form-extra a:link,
+.form-extra a:visited {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--submit-button-color);
+}
+
+.form-extra a:hover {
+    text-decoration: underline;
+    color: var(--submit-button-col-hover);
+}
+
