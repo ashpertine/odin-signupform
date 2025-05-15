@@ -126,6 +126,12 @@ fieldset ul {
     list-style: none;
     padding: 0;
 }
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
 
 fieldset li {
     display: flex;
@@ -145,6 +151,18 @@ fieldset li>div>input {
     display: block;
     padding: 8px;
     width: 120%;
+    border: 1px solid rgb(185, 185, 185);
+    border-radius: 2px;
+}
+
+fieldset li>div>input:focus {
+    border: 1px solid rgb(71, 71, 253);
+    box-shadow: 2px 2px 5px #00000063;
+}
+
+fieldset li>div>input:invalid {
+    border: 1px solid red;
+    box-shadow: 2px 2px 5px #00000063;
 }
 
 .form-extra {
